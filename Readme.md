@@ -11,10 +11,10 @@ Forge your path through the diverse universe of cryptocurrencies with the Univer
 
 ## Installation
 
-Install the Universal Wallet Forge globally using npm:
+Install the Wallet Forge globally using npm:
 
 ```bash
-npm install -g universal-wallet-forge
+npm install -g wallet-forge
 ```
 
 ## Usage
