@@ -1,6 +1,6 @@
 {
   "name": "wallet-forge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Embark on a cryptographic journey with wallet-forge, a Node.js library that opens portals to multiple blockchain realms. This mystical tool harnesses the ancient art of BIP-39 mnemonics to generate secure wallets for Ethereum, Bitcoin, Solana, and Tezos. Whether you're a seasoned sorcerer of the blockchain world or a novice in the cryptographic universe, universal-wallet-forge offers a seamless and secure way to create wallets across different chains. Perfect for applications needing multi-chain compatibility, it's your go-to spellbook for generating, managing, and utilizing crypto wallets in your Node.js applications.",
   "main": "index.js",
   "scripts": {
