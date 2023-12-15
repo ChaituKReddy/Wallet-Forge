@@ -1,52 +1,61 @@
-# Universal Wallet Forge
+# Wallet Forge CLI
 
-## 🌌 Welcome to the Wallet Forge
+Forge your path through the diverse universe of cryptocurrencies with the Universal Wallet Forge CLI. This Node.js-based command-line tool empowers you to generate wallets for multiple blockchains, including Ethereum, Bitcoin, Solana, and Tezos, all from a single command.
 
-Forge your path through the diverse universe of cryptocurrencies with Wallet Forge. This Node.js-based wizardry empowers you to conjure wallets for a multitude of blockchains, including Ethereum, Bitcoin, Solana, and Tezos, all from a single, mystical command.
+## Features
 
-## ✨ Features
+- <b>Multi-Blockchain Support:</b> Seamlessly create wallets for Ethereum, Bitcoin, Solana, and Tezos. </br>
+- <b>BIP-39 Mnemonic Support:</b> Generate new mnemonics or use existing ones to create wallets. </br>
+- <b>Interactive CLI:</b> User-friendly prompts guide you through wallet generation. </br>
+- <b>Custom Wallet Numbers:</b> Choose how many wallets to generate for each cryptocurrency. </br>
 
-- <b>Multi-Blockchain Alchemy:</b> Seamlessly create wallets for various cryptocurrencies.
-- <b>BIP-39 Enchantment:</b> Utilizes the BIP-39 standard for mystical yet secure mnemonic seed phrase generation.
-- <b>Diverse Chain Compatibility:</b> From the Ethereum highlands to the Bitcoin depths, and across the Solana skies to Tezos realms, compatibility is our spell.
+## Installation
 
-## 📜 Installation
-
-Conjure the Wallet Forge into your local dominion with these simple incantations:
+Install the Universal Wallet Forge globally using npm:
 
 ```bash
-git clone https://github.com/ChaituKReddy/Wallet-Forge
-cd Wallet-Forge
-npm install
+npm install -g universal-wallet-forge
 ```
 
-### 🔮 Usage
+## Usage
 
-To begin your sorcery, invoke the following incantation in your command line:
+To start generating wallets, simply run:
+
+```bash
+wallet-forge
+```
+
+Follow the interactive prompts to choose the blockchain network, number of wallets, and mnemonic options.
+
+## Generating Wallets
+
+1. <b>Select Network:</b> Choose from Ethereum, Bitcoin, Solana, or Tezos.
+2. <b>Number of Wallets:</b> Specify how many wallets you want to generate.
+3. <b>Mnemonic Option:</b> Opt to generate a new mnemonic or use an existing one.
+   If using an existing mnemonic, you'll be prompted to enter it.
+
+## Example
 
 ```
-node index.js
+$ wallet-forge
+
+? Which network do you want to generate wallets for? (Use arrow keys)
+❯ Ethereum
+Bitcoin
+Solana
+Tezos
+
+? How many wallets do you want to generate? 5
+
+? Do you want to generate a new mnemonic or use an existing one? (Use arrow keys)
+❯ Generate New
+Use Existing
 ```
 
-Behold as wallets for Ethereum, Bitcoin, Solana, and Tezos materialize before your eyes!
+## Contributing
 
-## 🧙‍♂️ Advanced Arcanum
+Contributions to Universal Wallet Forge are welcome! Feel free to fork the repository, make your enhancements, and submit a pull request.
 
-- Ethereum Wallets: Summoned with the ether of Ethereum blockchain.
-- Bitcoin Wallets: Crafted from the cryptic depths of Bitcoin's core.
-- Solana Wallets: Woven from the cosmic fabric of the Solana ecosystem.
-- Tezos Wallets: Forged in the ancient fires of Tezos lore.
+## License
 
-## ⚠️ Magical Precautions
-
-- Treat the generated mnemonic phrases with the utmost secrecy. They are the keys to your kingdom.
-- Test your spells in the testnet environment before summoning real assets.
-- Regularly update your spells with npm update to ensure the latest alchemy is at your fingertips.
-
-## 🤝 Contributing
-
-Contributions are welcomed with open arms! Feel free to fork the repository, cast your enhancements, and create a pull request.
-
-## ⚖️ License
-
-This repository is bound by the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
