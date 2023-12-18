@@ -1,10 +1,10 @@
 # Wallet Forge CLI
 
-Forge your path through the diverse universe of cryptocurrencies with the Universal Wallet Forge CLI. This Node.js-based command-line tool empowers you to generate wallets for multiple blockchains, including Ethereum, Bitcoin, Solana, and Tezos, all from a single command.
+Forge your path through the diverse universe of cryptocurrencies with the Wallet Forge CLI. This Node.js-based command-line tool empowers you to generate wallets for multiple blockchains, including Ethereum, Bitcoin, Solana, Tezos, Litecoin and Dogecoin, all from a single command.
 
 ## Features
 
-- <b>Multi-Blockchain Support:</b> Seamlessly create wallets for Ethereum, Bitcoin, Solana, and Tezos. </br>
+- <b>Multi-Blockchain Support:</b> Seamlessly create wallets for Ethereum, Bitcoin, Solana, Tezos, Litecoin and Dogecoin. </br>
 - <b>BIP-39 Mnemonic Support:</b> Generate new mnemonics or use existing ones to create wallets. </br>
 - <b>Interactive CLI:</b> User-friendly prompts guide you through wallet generation. </br>
 - <b>Custom Wallet Numbers:</b> Choose how many wallets to generate for each cryptocurrency. </br>
@@ -29,7 +29,7 @@ Follow the interactive prompts to choose the blockchain network, number of walle
 
 ## Generating Wallets
 
-1. <b>Select Network:</b> Choose from Ethereum, Bitcoin, Solana, or Tezos.
+1. <b>Select Network:</b> Choose from Ethereum, Bitcoin, Solana, Tezos, Litecoin or Dogecoin.
 2. <b>Number of Wallets:</b> Specify how many wallets you want to generate.
 3. <b>Mnemonic Option:</b> Opt to generate a new mnemonic or use an existing one.
    If using an existing mnemonic, you'll be prompted to enter it.
@@ -44,6 +44,8 @@ $ wallet-forge
 Bitcoin
 Solana
 Tezos
+Litecoin
+Dogecoin
 
 ? How many wallets do you want to generate? 5
 
@@ -54,8 +56,8 @@ Use Existing
 
 ## Contributing
 
-Contributions to Universal Wallet Forge are welcome! Feel free to fork the repository, make your enhancements, and submit a pull request.
+Contributions to Wallet Forge are welcome! Feel free to fork the repository, make your enhancements, and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
