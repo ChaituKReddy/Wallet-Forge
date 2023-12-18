@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const bip39 = require("bip39");
 const generateEthereumWallet = require("./networks/ethereum");
 const generateBitcoinWallet = require("./networks/bitcoin");
