@@ -10,6 +10,8 @@ const generateDogecoinWallet = require("./networks/dogecoin");
 const inquirer = require("inquirer");
 const Table = require("cli-table3");
 const figlet = require("figlet");
+const fs = require("fs");
+const path = require("path");
 
 async function generateSeedPhrase() {
   const mnemonic = bip39.generateMnemonic();
@@ -80,9 +82,10 @@ async function generateWallets() {
     head: ["Wallet", "Private Key"],
   });
 
+  let wallets = [];
+
   for (let i = 0; i < userInputs.numberOfWallets; i++) {
     let walletDetails;
-
     switch (userInputs.network) {
       case "Ethereum":
         walletDetails = await generateEthereumWallet(mnemonic, i);
@@ -105,6 +108,7 @@ async function generateWallets() {
     }
 
     if (walletDetails) {
+      wallets.push(walletDetails);
       table.push([walletDetails.address, walletDetails.privateKey]);
     }
   }
@@ -112,6 +116,47 @@ async function generateWallets() {
   console.clear();
   console.log("Mnemonic is ", mnemonic);
   console.log(table.toString());
+
+  const saveAnswer = await inquirer.prompt([
+    {
+      type: "confirm",
+      name: "save",
+      message: "Do you want to save these wallet details?",
+      default: false,
+    },
+  ]);
+
+  if (saveAnswer.save) {
+    const pathAnswer = await inquirer.prompt([
+      {
+        type: "input",
+        name: "filePath",
+        message:
+          "Enter the file path where you want to save the wallet details:",
+        default: `./${userInputs.network}-wallets.json`,
+      },
+    ]);
+
+    exportWallets(userInputs.network, mnemonic, wallets, pathAnswer.filePath);
+  }
+}
+
+function exportWallets(network, mnemonic, wallets, filePath) {
+  try {
+    if (!filePath.endsWith(".json")) {
+      filePath = path.join(filePath, `./${network}-wallets.json`);
+    }
+    const data = {
+      network: network,
+      mnemonic: mnemonic,
+      wallets: wallets,
+    };
+    const jsonData = JSON.stringify(data, null, 2);
+    fs.writeFileSync(filePath, jsonData, "utf8");
+    console.log(`Wallets exported successfully to ${filePath}`);
+  } catch (error) {
+    console.error("Error exporting wallets:", error.message);
+  }
 }
 
 generateWallets();
